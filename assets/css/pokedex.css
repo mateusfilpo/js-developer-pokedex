@@ -78,12 +78,17 @@
     background-color: #f9aec7;
 }
 
+.pokemon-link {
+    text-decoration: none;
+}
+
 .pokemon {
     display: flex;
     flex-direction: column;
     margin: .5rem;
     padding: 1rem;
     border-radius: 1rem;
+    cursor: pointer;
 }
 
 .pokemon .number {
@@ -97,6 +102,11 @@
     text-transform: capitalize;
     color: #fff;
     margin-bottom: .25rem;
+    transition: text-shadow 0.3s;
+}
+
+.pokemon:hover .name {
+    text-shadow: 0 0 4px black; 
 }
 
 .pokemon .detail {
@@ -123,8 +133,13 @@
 }
 
 .pokemon .detail img {
-    max-width: 100%;
+    max-width: 95%;
     height: 70px;
+    transition: transform 0.3s;
+}
+
+.pokemon .detail img:hover {
+    transform: scale(1.3); 
 }
 
 .pagination {
@@ -144,6 +159,7 @@
     background-color: #6c79db;
     border: none;
     border-radius: 1rem;
+    cursor: pointer;
 }
 
 @media screen and (min-width: 380px) {
